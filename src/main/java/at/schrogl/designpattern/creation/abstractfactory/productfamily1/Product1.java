@@ -1,6 +1,6 @@
 package at.schrogl.designpattern.creation.abstractfactory.productfamily1;
 
-import at.schrogl.designpattern.creation.abstractfactory.AbstractProduct1;
+import at.schrogl.designpattern.creation.abstractfactory.abstractproduct.AbstractProduct1;
 
 /**
  * Konkretes Produkt-1 der 1.Produktfamilie

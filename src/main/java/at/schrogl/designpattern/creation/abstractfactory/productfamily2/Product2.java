@@ -1,15 +1,7 @@
 package at.schrogl.designpattern.creation.abstractfactory.productfamily2;
 
-import at.schrogl.designpattern.creation.abstractfactory.AbstractProduct2;
+import at.schrogl.designpattern.creation.abstractfactory.abstractproduct.AbstractProduct2;
 
-/**
- * Konkretes Produkt-2 der 2.Produktfamilie
- * <p>
- * Implementiert die abstrake Schnittstelle für Produkt-2. Ein Client arbeitet
- * mit diesem Produkt nur über dessen abstrake Schnittstelle.
- * 
- * @author Fritz Schrogl
- */
 public class Product2 implements AbstractProduct2 {
 
 	@Override

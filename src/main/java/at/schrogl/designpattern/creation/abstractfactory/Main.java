@@ -1,5 +1,6 @@
 package at.schrogl.designpattern.creation.abstractfactory;
 
+import at.schrogl.designpattern.creation.abstractfactory.abstractproduct.AbstractFactory;
 import at.schrogl.designpattern.creation.abstractfactory.productfamily1.ConcreteFactory1;
 import at.schrogl.designpattern.creation.abstractfactory.productfamily2.ConcreteFactory2;
 
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Verwendung einer Abstrakten Fabrik
+ * Usage example of an abstract factory
  * 
  * @author Fritz Schrogl
  */
@@ -15,28 +16,22 @@ public class Main {
 
 	public static void main(String[] args) {
 		/*
-		 * Erzeugt einen Produktkatalog der Produktfamilie-1
+		 * Creation of product family 1
 		 */
 		AbstractFactory factory = ConcreteFactory1.getInstance();
 		createProductCatalog(factory);
 
 		/*
-		 * Erzeugt einen Produktkatalog der Produktfamilie-2
+		 * Creation of product family 2
 		 */
 		factory = ConcreteFactory2.getInstance();
 		createProductCatalog(factory);
 	}
 
 	/**
-	 * Der Client erzeugt einen Produktkatalog mit der ihm übergebenen Factory.
-	 * Der Client arbeitet nur über die Schnittstellen der Fabrik (und der
-	 * Produkte), daher kann die konkrete Produktfamilie nach belieben
-	 * ausgewechselt werden.
-	 * 
-	 * @param factory
-	 *            Fabrik welche die Produkte für den Katalog erzeugt
-	 * @return
-	 *         Den Produktkatalog
+	 * The client only interacts with the factory and its products through interfaces.
+	 * Hence different product families can be created without the need to change the code using
+	 * this factory/prodcuts.
 	 */
 	private static List<Object> createProductCatalog(AbstractFactory factory) {
 		List<Object> catalog = new ArrayList<>(3);

@@ -1,15 +1,7 @@
 package at.schrogl.designpattern.creation.abstractfactory.productfamily2;
 
-import at.schrogl.designpattern.creation.abstractfactory.AbstractProduct3;
+import at.schrogl.designpattern.creation.abstractfactory.abstractproduct.AbstractProduct3;
 
-/**
- * Konkretes Produkt-3 der 2.Produktfamilie
- * <p>
- * Implementiert die abstrake Schnittstelle für Produkt-3. Ein Client arbeitet
- * mit diesem Produkt nur über dessen abstrake Schnittstelle.
- * 
- * @author Fritz Schrogl
- */
 public class Product3 implements AbstractProduct3 {
 
 	private String hashedParam;

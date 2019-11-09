@@ -1,27 +1,24 @@
 package at.schrogl.designpattern.creation.abstractfactory.productfamily1;
 
-import at.schrogl.designpattern.creation.abstractfactory.AbstractFactory;
-import at.schrogl.designpattern.creation.abstractfactory.AbstractProduct1;
-import at.schrogl.designpattern.creation.abstractfactory.AbstractProduct2;
-import at.schrogl.designpattern.creation.abstractfactory.AbstractProduct3;
+import at.schrogl.designpattern.creation.abstractfactory.abstractproduct.AbstractFactory;
+import at.schrogl.designpattern.creation.abstractfactory.abstractproduct.AbstractProduct1;
+import at.schrogl.designpattern.creation.abstractfactory.abstractproduct.AbstractProduct2;
+import at.schrogl.designpattern.creation.abstractfactory.abstractproduct.AbstractProduct3;
 
 /**
- * Konkrete Fabrik für die 1.Produktfamilie
- * <p>
- * Eine konkrete Fabrik implementiert die Abstrake Fabrik und überschreibt deren
- * Fabrikmethoden mit konkreten Implementierungen. Die konkrete Fabrik kann
- * konkrete Produkttypen zurück liefern oder deren abstrakte Schnittstellen.
- * <p>
- * Da im Allgemeinen nur eine Instanz einer konkreten Fabrik je Applikation
- * benötigt wird implementiert man eine konkrete Fabrik oft als Singleton.
- * 
- * @author Fritz Schrogl
+ * Factory for creating objects of product family 1.
+ *
+ * The factory methods for each product are allowed to return the product interface or the
+ * product type itself.
+ *
+ * It is not required for a factory to be implemented as singleton, but often done so.
  */
 public class ConcreteFactory1 implements AbstractFactory {
 
 	private static ConcreteFactory1 instance = null;
 
 	private ConcreteFactory1() {
+		// this concrete factory implements the singleton pattern
 	}
 
 	@Override
@@ -42,11 +39,7 @@ public class ConcreteFactory1 implements AbstractFactory {
 	}
 
 	/**
-	 * Die konkrete Fabrik ist als Singleton implementiert.
-	 * <code>getInstance</code> ist die zugehörige Factorymethode.
-	 * 
-	 * @return
-	 *         Die einzige Instanz dieser konkreten Fabrik
+	 * A factory method for obtaining an instance of this factory
 	 */
 	public static AbstractFactory getInstance() {
 		if (instance == null)
